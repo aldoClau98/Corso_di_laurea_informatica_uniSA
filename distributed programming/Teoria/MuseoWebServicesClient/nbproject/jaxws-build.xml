@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+          <classpath ><fileset dir="./extraLib"><include name="**/*.jar"/></fileset></classpath>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-MuseoEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/MuseoEJB"/>
+        <property name="wsdl-MuseoEJB" location="xml-resources/web-service-references/MuseoEJB/wsdl/localhost_8080/MuseoEJBService/MuseoEJB.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MuseoEJB" destdir="${build.generated.dir}/jax-wsCache/MuseoEJB" wsdl="${wsdl-MuseoEJB}" catalog="catalog.xml" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/MuseoEJBService/MuseoEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-MuseoEJB}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/MuseoEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/MuseoEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-MuseoEJB" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/MuseoEJB"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/museo"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-MuseoEJB"/>
+</project>

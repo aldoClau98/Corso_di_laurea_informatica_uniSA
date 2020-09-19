@@ -1,0 +1,158 @@
+.container {
+
+	padding: 60px 12px;
+	padding-bottom: 12px;
+	margin-bottom: 10px;
+}
+
+body {
+	padding-top: auto;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background-color: #ccd8e3;
+	
+}
+
+#header {
+	background-color: #1A2334;
+}
+
+/*Search nav*/
+.search-container {
+	float: right;
+}
+
+#header .search-container input[type=text] {
+	padding: 6px;
+	margin-top: 8px;
+	font-size: 17px;
+	border: solid;
+	border-color: #1A2334;
+}
+
+#header .search-container button {
+	float: right;
+	padding: 6px 10px;
+	margin-top: 8px;
+	margin-right: 16px;
+	background: #ddd;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+	border: 1px solid #567594;
+}
+
+#header .search-container button:hover {
+	background: #CCCC;
+}
+
+@media screen and (max-width: 600px) {
+	#header .search-container {
+		float: none;
+	}
+	#header input[type=text], #header .search-container button {
+		float: none;
+		display: block;
+		text-align: left;
+		width: 100%;
+		margin: 0;
+		padding: 14px;
+	}
+}
+
+#home {
+	
+}
+
+
+/*Categorie*/
+
+#categorie .row_cat {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+#categorie img {
+	border-radius: 50%;
+	padding: 10px;
+}
+
+.thumbnail{
+	background-color: #ccd8e3;
+}
+
+#categorie .cat {
+	
+}
+
+#categorie h4 {
+	text-align: center;
+}
+
+/*Footer*/
+
+#lab_social_icon_footer {
+	
+
+	background-color: #1A2334;
+	padding: 5px 0 0 0;
+}
+
+#lab_social_icon_footer a {
+	color: #333f4d;
+}
+
+#lab_social_icon_footer .social:hover {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
+
+#lab_social_icon_footer .social {
+	-webkit-transform: scale(0.8);
+	/* Browser Variations: */
+	-moz-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+}
+
+#lab_social_icon_footer #social-fb:hover {
+	color: #3B5998;
+}
+
+#lab_social_icon_footer #social-tw:hover {
+	color: #4099FF;
+}
+
+#lab_social_icon_footer #social-gp:hover {
+	color: #d34836;
+}
+
+#lab_social_icon_footer #social-em:hover {
+	color: #f39c12;
+}
+
+
+/*utente*/
+
+#utente {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+
+
+
+/*Carrello*/
+
+#carrello {
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+}
+
+
+#checkout {
+		padding-bottom: 40px;
+	margin-bottom: 40px;
+}

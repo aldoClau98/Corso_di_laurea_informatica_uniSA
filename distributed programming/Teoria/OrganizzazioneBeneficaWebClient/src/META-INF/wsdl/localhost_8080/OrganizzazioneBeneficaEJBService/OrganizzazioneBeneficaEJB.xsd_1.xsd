@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.0 (wsit240-7e98ff4; 2017-08-03T21:19:54+0200) JAXWS-RI/2.3.0 JAXWS-API/2.3.0 JAXB-RI/2.3.0 JAXB-API/2.3.0 svn-revision#unknown. --><xs:schema xmlns:tns="http://organizzazioneBenefica/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://organizzazioneBenefica/">
+
+<xs:element name="aggiornaOrganizzazione" type="tns:aggiornaOrganizzazione"/>
+
+<xs:element name="aggiornaOrganizzazioneResponse" type="tns:aggiornaOrganizzazioneResponse"/>
+
+<xs:element name="aggiungiOrganizzazione" type="tns:aggiungiOrganizzazione"/>
+
+<xs:element name="aggiungiOrganizzazioneResponse" type="tns:aggiungiOrganizzazioneResponse"/>
+
+<xs:element name="eliminaOrganizzazione" type="tns:eliminaOrganizzazione"/>
+
+<xs:element name="eliminaOrganizzazioneResponse" type="tns:eliminaOrganizzazioneResponse"/>
+
+<xs:element name="organizzazioneBenefica" type="tns:organizzazioneBenefica"/>
+
+<xs:element name="trovaPerBilancio" type="tns:trovaPerBilancio"/>
+
+<xs:element name="trovaPerBilancioResponse" type="tns:trovaPerBilancioResponse"/>
+
+<xs:element name="trovaPerId" type="tns:trovaPerId"/>
+
+<xs:element name="trovaPerIdResponse" type="tns:trovaPerIdResponse"/>
+
+<xs:element name="trovaPerProgetti" type="tns:trovaPerProgetti"/>
+
+<xs:element name="trovaPerProgettiResponse" type="tns:trovaPerProgettiResponse"/>
+
+<xs:element name="trovaPerTrasparenza" type="tns:trovaPerTrasparenza"/>
+
+<xs:element name="trovaPerTrasparenzaResponse" type="tns:trovaPerTrasparenzaResponse"/>
+
+<xs:element name="trovaTutteOrganizzazioni" type="tns:trovaTutteOrganizzazioni"/>
+
+<xs:element name="trovaTutteOrganizzazioniResponse" type="tns:trovaTutteOrganizzazioniResponse"/>
+
+<xs:complexType name="trovaPerBilancio">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaPerBilancioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:organizzazioneBenefica" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="organizzazioneBenefica">
+<xs:sequence>
+<xs:element name="bilancio" type="xs:float" minOccurs="0"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="numeroDonatori" type="xs:int" minOccurs="0"/>
+<xs:element name="numeroPaesiCoperti" type="xs:int" minOccurs="0"/>
+<xs:element name="percentualeTrasparenza" type="xs:int" minOccurs="0"/>
+<xs:element name="progetti" type="xs:int" minOccurs="0"/>
+<xs:element name="sede" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiOrganizzazione">
+<xs:sequence>
+<xs:element name="arg0" type="tns:organizzazioneBenefica" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiOrganizzazioneResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaPerId">
+<xs:sequence>
+<xs:element name="arg0" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:organizzazioneBenefica" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaOrganizzazione">
+<xs:sequence>
+<xs:element name="arg0" type="tns:organizzazioneBenefica" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaOrganizzazioneResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="eliminaOrganizzazione">
+<xs:sequence>
+<xs:element name="arg0" type="tns:organizzazioneBenefica" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaOrganizzazioneResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaTutteOrganizzazioni">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaTutteOrganizzazioniResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:organizzazioneBenefica" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerTrasparenza">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaPerTrasparenzaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:organizzazioneBenefica" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerProgetti">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerProgettiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:organizzazioneBenefica" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
